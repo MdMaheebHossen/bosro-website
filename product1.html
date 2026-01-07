@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>থ্রি-পিস ৳800 | Bosro Cotton Collection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow sticky top-0">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <h1 class="text-xl font-bold text-pink-600"><a href="index.html">Bosro Cotton Collection</a></h1>
+        </div>
+    </header>
+
+    <!-- PRODUCT INFO -->
+    <section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8">
+
+        <img src="1_800.jpg" class="rounded shadow w-full">
+
+        <div>
+            <h2 class="text-2xl font-bold mb-2">ডিজাইনার কটন থ্রি-পিস</h2>
+            <p class="text-pink-600 text-2xl font-bold mb-4">৳ 800</p>
+
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li>ফ্যাব্রিক: কটন</li>
+                <li>সারা বাংলাদেশে ডেলিভারি</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- ORDER FORM (EXCEL CONNECTED) -->
+    <section class="bg-white py-10">
+        <div class="max-w-4xl mx-auto px-4">
+
+            <h3 class="text-xl font-bold text-center text-pink-600 mb-6">
+                Order Form
+            </h3>
+
+            <form action="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID" method="post"
+                target="_blank" class="bg-gray-50 p-6 rounded shadow space-y-4">
+
+                <!-- Hidden fixed values -->
+                <input type="hidden" name="Product" value="থ্রি-পিস">
+                <input type="hidden" name="Price" value="800">
+
+                <div>
+                    <label class="block font-medium mb-1">Quantity</label>
+                    <input name="Quantity" type="number" min="1" required class="w-full border px-3 py-2 rounded">
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">Size</label>
+                    <select name="Size" class="w-full border px-3 py-2 rounded">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">Customer Name</label>
+                    <input name="CustomerName" required class="w-full border px-3 py-2 rounded">
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">Phone</label>
+                    <input name="Phone" required class="w-full border px-3 py-2 rounded">
+                </div>
+
+                <div>
+                    <label class="block font-medium mb-1">Address</label>
+                    <textarea name="Address" class="w-full border px-3 py-2 rounded"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-green-500 text-white py-2 rounded font-bold">
+                    Submit Order
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 text-sm text-gray-500">
+        © ২০২৫ Bosro Cotton Collection
+    </footer>
+
+</body>
+
+</html>
