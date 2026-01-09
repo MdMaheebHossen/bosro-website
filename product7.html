@@ -3,138 +3,149 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>থ্রি-পিস ৳1150 | Bosro Cotton Collection</title>
+    <title>থ্রি-পিস ৳১১৫০ | Bosro Cotton Collection</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- ================= HEADER ================= -->
-  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-40 transition-colors duration-500">
+<!-- ================= HEADER ================= -->
+<header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-40 transition-colors duration-500">
     <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-3">
-
-      <!-- Logo -->
-      <div class="flex items-center gap-3">
         <h1 class="text-xl sm:text-2xl font-bold text-pink-600 dark:text-pink-400">
-          <a href="index.html">Bosro Cotton Collection</a>
+            <a href="index.html">Bosro Cotton Collection</a>
         </h1>
-      </div>
 
-      <!-- Navigation -->
-      <nav class="flex flex-wrap gap-3 font-medium text-sm sm:text-base">
-        <a href="#products" class="hover:text-pink-600 dark:hover:text-pink-400">থ্রি-পিস</a>
-        <a href="https://www.facebook.com/people/Bosro-Cotton-Collection/61583423948607/" target="_blank"
-          class="hover:text-pink-600 dark:hover:text-pink-400">Facebook Page</a>
-        <a href="#contact" class="hover:text-pink-600 dark:hover:text-pink-400">যোগাযোগ</a>
-      </nav>
+        <nav class="flex gap-4 font-medium text-sm sm:text-base">
+            <a href="#products" class="hover:text-pink-600">থ্রি-পিস</a>
+            <a href="https://www.facebook.com/people/Bosro-Cotton-Collection/61583423948607/" target="_blank"
+                class="hover:text-pink-600">Facebook Page</a>
+            <a href="#contact" class="hover:text-pink-600">যোগাযোগ</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= PRODUCT INFO ================= -->
+<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8 items-center" id="products">
+
+    <img src="7_1150.jpg" alt="থ্রি-পিস" class="rounded shadow w-full">
+
+    <div>
+        <h2 class="text-2xl font-bold mb-2">থ্রি-পিস</h2>
+        <p class="text-pink-600 text-2xl font-bold mb-4">৳ ১১৫০</p>
+
+        <ul class="list-disc pl-5 space-y-1 text-sm">
+            <li>ফ্যাব্রিক: কটন</li>
+            <li>স্টাইলিশ এবং আরামদায়ক</li>
+            <li>সারা বাংলাদেশে ডেলিভারি</li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- ================= WHATSAPP ORDER ================= -->
+<section class="bg-white py-10">
+    <div class="max-w-4xl mx-auto px-4">
+
+        <h3 class="text-xl font-bold text-center text-pink-600 mb-4">
+            WhatsApp এ অর্ডার করুন
+        </h3>
+
+        <p class="text-sm text-center text-gray-600 mb-5">
+            নিচের ফর্ম পূরণ করে WhatsApp এ অর্ডার পাঠান
+        </p>
+
+        <form class="bg-gray-50 p-6 rounded shadow space-y-4">
+
+            <!-- Hidden -->
+            <input type="hidden" id="product" value="থ্রি-পিস">
+            <input type="hidden" id="price" value="1150">
+            <input type="hidden" id="pageLink" value="https://mdmaheebhossen.github.io/bosro-website/product7.html">
+
+            <div>
+                <label class="block font-medium mb-1">Quantity</label>
+                <input id="quantity" type="number" min="1" required
+                    class="w-full border px-3 py-2 rounded">
+            </div>
+
+            <div>
+                <label class="block font-medium mb-1">Customer Name</label>
+                <input id="name" required class="w-full border px-3 py-2 rounded">
+            </div>
+
+            <div>
+                <label class="block font-medium mb-1">Phone</label>
+                <input id="phone" required class="w-full border px-3 py-2 rounded">
+            </div>
+
+            <div>
+                <label class="block font-medium mb-1">Address</label>
+                <textarea id="address" class="w-full border px-3 py-2 rounded"></textarea>
+            </div>
+
+            <button type="button"
+                onclick="
+var product = document.getElementById('product').value;
+var price = document.getElementById('price').value;
+var link = document.getElementById('pageLink').value;
+
+var q = document.getElementById('quantity').value.trim();
+var n = document.getElementById('name').value.trim();
+var p = document.getElementById('phone').value.trim();
+var a = document.getElementById('address').value.trim();
+
+if(q===''||n===''||p===''){
+    alert('সব তথ্য পূরণ করুন');
+} else if(p.length < 11){
+    alert('সঠিক মোবাইল নম্বর দিন');
+} else {
+    var msg =
+    '🛒 অর্ডার%0A%0A' +
+    'প্রোডাক্ট: '+product+'%0A' +
+    'দাম: ৳'+price+'%0A%0A' +
+    'পরিমাণ: '+q+'%0A%0A' +
+    'নাম: '+n+'%0A' +
+    'মোবাইল: '+p+'%0A' +
+    'ঠিকানা: '+a+'%0A%0A' +
+    'লিংক: '+link;
+
+    window.open('https://wa.me/8801743277815?text='+msg,'_blank');
+}
+"
+                class="w-full bg-green-500 text-white py-2 rounded font-bold">
+                Submit Order
+            </button>
+
+        </form>
 
     </div>
-  </header>
+</section>
 
-    <!-- ================= PRODUCT LANDING ================= -->
-    <section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
-
-        <!-- Product Image -->
-        <img src="7_1150.jpg" alt="থ্রি-পিস" class="w-full rounded shadow">
-
-        <!-- Product Details -->
-        <div>
-            <h2 class="text-2xl font-bold mb-2">থ্রি-পিস</h2>
-            <p class="text-pink-600 text-2xl font-bold mb-4">৳ 1150</p>
-
-            <ul class="list-disc pl-5 space-y-1 text-sm mb-6">
-                <li>ফ্যাব্রিক: কটন</li>
-                <li>স্টাইলিশ এবং আরামদায়ক</li>
-                <li>সারা বাংলাদেশে ডেলিভারি</li>
-            </ul>
-
-            <a href="#order" class="inline-block bg-green-500 text-white px-6 py-2 rounded-full font-bold">
-                Order Now
-            </a>
-        </div>
-
-    </section>
-
-    <!-- ================= ORDER FORM ================= -->
-    <section id="order" class="bg-white py-10">
-        <div class="max-w-4xl mx-auto px-4">
-
-            <h3 class="text-xl font-bold text-center text-pink-600 mb-6">
-                Order This Product
-            </h3>
-
-            <form action="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID" method="post"
-                target="_blank" class="space-y-4 bg-gray-50 p-6 rounded shadow">
-
-                <!-- Hidden Fields for Product Name & Price -->
-                <input type="hidden" name="Product" value="থ্রি-পিস">
-                <input type="hidden" name="Price" value="1150">
-
-                <div>
-                    <label class="block font-medium mb-1">Quantity</label>
-                    <input type="number" name="Quantity" min="1" required class="w-full border px-3 py-2 rounded">
-                </div>
-
-                <div>
-                    <label class="block font-medium mb-1">Size</label>
-                    <select name="Size" class="w-full border px-3 py-2 rounded">
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                        <option>XXL</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block font-medium mb-1">Customer Name</label>
-                    <input type="text" name="CustomerName" required class="w-full border px-3 py-2 rounded">
-                </div>
-
-                <div>
-                    <label class="block font-medium mb-1">Phone</label>
-                    <input type="tel" name="Phone" required class="w-full border px-3 py-2 rounded">
-                </div>
-
-                <div>
-                    <label class="block font-medium mb-1">Address</label>
-                    <textarea name="Address" class="w-full border px-3 py-2 rounded"></textarea>
-                </div>
-
-                <button type="submit" class="w-full bg-green-500 text-white py-2 rounded font-bold">
-                    Submit Order
-                </button>
-
-            </form>
-
-        </div>
-    </section>
-
- <!-- ================= FOOTER ================= -->
-  <footer id="contact" class="bg-white dark:bg-gray-800 border-t mt-10 scroll-mt-20 transition-colors duration-500">
+<!-- ================= FOOTER ================= -->
+<footer id="contact" class="bg-white dark:bg-gray-800 border-t mt-10">
     <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm sm:text-base">
-      <p class="font-bold">Bosro Cotton Collection</p>
-      <p class="mt-2 whitespace-pre-line text-gray-700 dark:text-gray-300">
-        যারা পাইকারি ও খুচরামূল্যে থ্রি পিছ নিতে চান
-        মোবাইল নাম্বার :- +880 1743-277815
-        দোকানের ঠিকানা :- দোকান নং- ২৫, ফুলবাড়ীয়া সুপার মার্কেট ১ ( বেইজমেন্ট ), গুলিস্তান BRTC কাউন্টারের পাশে।
-      </p>
+        <p class="font-bold">Bosro Cotton Collection</p>
 
-      <a href="https://www.facebook.com/people/Bosro-Cotton-Collection/61583423948607/" target="_blank"
-        class="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline font-semibold text-sm sm:text-base">
-        Visit Our Facebook Page
-      </a>
+        <p class="mt-2 whitespace-pre-line text-gray-700 dark:text-gray-300">
+যারা পাইকারি ও খুচরা মূল্যে থ্রি-পিস নিতে চান
+মোবাইল নাম্বার: +880 1743-277815
+দোকানের ঠিকানা:
+দোকান নং- ২৫, ফুলবাড়ীয়া সুপার মার্কেট ১ (বেইজমেন্ট),
+গুলিস্তান BRTC কাউন্টারের পাশে।
+        </p>
+
+        <a href="https://www.facebook.com/people/Bosro-Cotton-Collection/61583423948607/"
+            target="_blank"
+            class="inline-block mt-4 text-blue-600 hover:underline font-semibold">
+            Visit Our Facebook Page
+        </a>
     </div>
 
-    <div class="text-center text-xs sm:text-sm py-3 text-gray-500 dark:text-gray-400">
-      © ২০২৫ Bosro Cotton Collection
+    <div class="text-center text-xs sm:text-sm py-3 text-gray-500">
+        © ২০২৫ Bosro Cotton Collection
     </div>
-  </footer>
+</footer>
 
 </body>
-
-
 </html>
-
-
